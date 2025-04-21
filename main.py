@@ -388,7 +388,7 @@ if __name__ == "__main__":
         # },
         llms={
             "default": GeneralLlm(
-                model="openai/gpt-4o",
+                model="openai/o4-mini",
                 temperature=0.3,
                 timeout=40,
                 allowed_tries=2,
