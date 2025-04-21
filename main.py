@@ -386,14 +386,7 @@ if __name__ == "__main__":
         #     ),
         #     "summarizer": "openai/gpt-4o-mini",
         # },
-        llms={
-            "default": GeneralLlm(
-                model="openai/o1",
-                temperature=0.3,
-                timeout=40,
-                allowed_tries=2,
-            ),
-        },
+        
     )
 
     if run_mode == "tournament":
