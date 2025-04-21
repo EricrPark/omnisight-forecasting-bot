@@ -163,14 +163,8 @@ class TemplateForecaster(ForecastBot):
             (b) The status quo outcome if nothing changed.
             (c) A brief description of a scenario that results in a No outcome.
             (d) A brief description of a scenario that results in a Yes outcome.
-            (e) What would you estimate the likelihood of this event if it had to happen in the next 30 days vs sometime this year? Why is this different?
-            (f) What is the best historical base rate or reference class to inform your forecast?  
 
             You write your rationale remembering that good forecasters put extra weight on the status quo outcome since the world changes slowly most of the time.
-
-            Please answer:
-            (a) Summarize why your final forecast is reasonable, including how you balanced the status quo, base rates, and potential surprises.            
-            (b) What is your confidence in this forecast? What could change your mind most easily?
 
             The last thing you write is your final answer as: "Probability: ZZ%", 0-100
             """
@@ -216,14 +210,8 @@ class TemplateForecaster(ForecastBot):
             (a) The time left until the outcome to the question is known.
             (b) The status quo outcome if nothing changed.
             (c) A description of an scenario that results in an unexpected outcome.
-            (e) What would you estimate the likelihood of different outcomes if the event had to happen in the next 30 days vs sometime this year? Why is this different?
-            (f) What is the best historical base rate or reference class to inform your forecast?  
 
             You write your rationale remembering that (1) good forecasters put extra weight on the status quo outcome since the world changes slowly most of the time, and (2) good forecasters leave some moderate probability on most options to account for unexpected outcomes.
-
-            Please answer:
-            (a) Summarize why your final forecast is reasonable, including how you balanced the status quo, base rates, and potential surprises.            
-            (b) What is your confidence in this forecast? What could change your mind most easily?
 
             The last thing you write is your final probabilities for the N options in this order {question.options} as:
             Option_A: Probability_A
@@ -287,15 +275,8 @@ class TemplateForecaster(ForecastBot):
             (d) The expectations of experts and markets.
             (e) A brief description of an unexpected scenario that results in a low outcome.
             (f) A brief description of an unexpected scenario that results in a high outcome.
-            (g) What would you estimate the likely value range if the event had to be resolved in the next 30 days? How might that change over the full timeframe?
-            (h) What is the best historical base rate or reference class to anchor your forecast distribution?
-            (i) What is a plausible alternate narrative that might result in the distribution being shifted significantly higher or lower than you expect?
 
             You remind yourself that good forecasters are humble and set wide 90/10 confidence intervals to account for unknown unknowns.
-
-            Please answer:
-            (a) Summarize why your final forecast is reasonable, including how you balanced the status quo, base rates, and potential surprises.            
-            (b) What is your confidence in this forecast? What could change your mind most easily?
 
             The last thing you write is your final answer as:
             "
@@ -386,14 +367,6 @@ if __name__ == "__main__":
         #     ),
         #     "summarizer": "openai/gpt-4o-mini",
         # },
-        llms={
-            "default": GeneralLlm(
-                model="openai/gpt-4o",
-                temperature=0.3,
-                timeout=40,
-                allowed_tries=2,
-            ),
-        },
     )
 
     if run_mode == "tournament":
